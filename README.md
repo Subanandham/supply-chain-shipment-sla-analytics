@@ -45,7 +45,7 @@ The analysis focuses on answering questions such as:
 
 The project uses a relational database consisting of **9 tables**.
 
-   text
+    
                          ┌──────────────┐
                          │  Customers   │
                          └──────┬───────┘
@@ -263,7 +263,7 @@ Stores returned products.
 
 # 📁 Repository Structure
 
-   text
+    
 supply-chain-shipment-sla-analytics/
 │
 ├── README.md
@@ -296,7 +296,7 @@ Install:
 ## Step 1 — Clone the Repository
 
    bash
-git clone https://github.com/<your-username>/supply-chain-shipment-sla-analytics.git
+git clone https://github.com/Subanandham/supply-chain-shipment-sla-analytics.git
    
 
 Navigate into the project:
@@ -315,13 +315,13 @@ Run the SQL scripts in the following order.
 
 Execute:
 
-   text
+    
 sql/01_create_database.sql
    
 
 This creates:
 
-   text
+    
 supply_chain_db
    
 
@@ -331,13 +331,13 @@ supply_chain_db
 
 Execute:
 
-   text
+    
 sql/02_create_tables.sql
    
 
 This creates the 9 relational tables:
 
-   text
+    
 Customers
 Products
 Warehouses
@@ -355,13 +355,13 @@ Returns
 
 Execute:
 
-   text
+    
 sql/03_insert_sample_data.sql
    
 
 Recommended insertion order:
 
-   text
+    
 Customers
    ↓
 Products
@@ -389,7 +389,7 @@ The order is important because of the foreign-key relationships.
 
 Execute:
 
-   text
+    
 sql/04_tasks_03_to_25.sql
    
 
@@ -397,34 +397,17 @@ This file contains the SQL solutions for Tasks 3–25.
 
 Each task is clearly separated using comments:
 
-   sql
--- =====================================================
--- TASK 3
--- =====================================================
-
--- Query
-
-
--- =====================================================
--- TASK 4
--- =====================================================
-
--- Query
-   
-
----
 
 ## Step 5 — Run Validation Queries
 
 Execute:
 
-   text
+    
 sql/05_validation_queries.sql
    
 
 These queries verify record counts, data consistency, relationships, and analytical calculations.
 
----
 
 # 🧪 Data Validation
 
@@ -479,7 +462,7 @@ FROM Returns;
 
 Expected base dataset:
 
-   text
+    
 Customers          15
 Products           10
 Warehouses          8
@@ -513,7 +496,7 @@ HAVING o.Order_Value <> SUM(od.Quantity * od.Unit_Price);
 
 ### Expected Result
 
-   text
+    
 Empty Set
    
 
@@ -535,7 +518,7 @@ WHERE c.Customer_ID IS NULL;
 
 Expected:
 
-   text
+    
 Empty Set
    
 
@@ -551,7 +534,7 @@ WHERE w.Warehouse_ID IS NULL;
 
 Expected:
 
-   text
+    
 Empty Set
    
 
@@ -567,7 +550,7 @@ WHERE o.Order_ID IS NULL;
 
 Expected:
 
-   text
+    
 Empty Set
    
 
@@ -642,7 +625,7 @@ WHERE o.Order_ID IS NULL;
 
 Functions used throughout the project include:
 
-   text
+    
 COUNT()
 SUM()
 AVG()
@@ -656,7 +639,7 @@ MIN()
 
 Used to calculate metrics at different business levels:
 
-   text
+    
 Customer
 Carrier
 Warehouse
@@ -685,7 +668,7 @@ END
 
 Used for comparisons such as:
 
-   text
+    
 Orders above average order value
 Customers above average spending
 Second-highest carrier performance
@@ -719,7 +702,7 @@ The project uses window functions for ranking and partitioned analysis.
 
 Examples:
 
-   text
+    
 RANK()
 DENSE_RANK()
 ROW_NUMBER()
@@ -733,13 +716,13 @@ These are particularly useful for carrier and warehouse performance analysis.
 
 The project creates:
 
-   text
+    
 Shipment_Performance_View
    
 
 The view combines:
 
-   text
+    
 Order
 Customer
 Warehouse
@@ -757,7 +740,7 @@ This provides a reusable analytical dataset.
 
 Indexes are created to improve query performance on frequently used columns such as:
 
-   text
+    
 Customer_ID
 Order_ID
 Shipment_ID
@@ -802,7 +785,7 @@ This allows management to identify carriers that require closer operational moni
 
 Comparing:
 
-   text
+    
 Actual_Delivery
         vs
 Expected_Delivery
@@ -810,7 +793,7 @@ Expected_Delivery
 
 allows shipments to be classified as:
 
-   text
+    
 ON TIME
 SLA BREACHED
    
@@ -849,7 +832,7 @@ Potential areas for investigation include:
 
 Combining:
 
-   text
+    
 Order Value
 +
 Delivery Performance
@@ -919,7 +902,7 @@ Through this project, I practiced:
 
 This project demonstrates practical SQL skills relevant to Data Engineering roles, particularly around:
 
-   text
+    
 Data Modeling
       ↓
 Data Ingestion
@@ -969,7 +952,7 @@ This project was developed as part of my hands-on Data Engineering portfolio to 
 
 # ⭐ Project Highlights
 
-   text
+    
 9     Relational Tables
 25    SQL Tasks
 40    Orders
