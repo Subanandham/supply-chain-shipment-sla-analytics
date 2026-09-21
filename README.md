@@ -891,13 +891,6 @@ The current sample contains:
 * 112 tracking records
 * 16 return records
 
-### Task 12 Dataset Consideration
-
-The current carrier dataset contains **two carriers per carrier region**. Task 12 asks for the **top 3 carriers in each region**, so the dataset must be expanded with additional carrier records and shipment assignments if the query is expected to return three distinct carriers for every region.
-
-This is a known dataset-design consideration and should be addressed before treating the final Task 12 output as complete.
-
----
 
 # 🚀 Key Learning Outcomes
 
